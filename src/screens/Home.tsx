@@ -10,12 +10,7 @@ const Home = (props: Props) => {
         <title>Javi Portfolio - home</title>
       </Helmet>
       <div className="max-w-7xl mx-auto">
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contacts />
-        <Footer />
+        <Hero />  
       </div>
     </>
   );
