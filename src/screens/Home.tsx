@@ -9,12 +9,14 @@ const Home = (props: Props) => {
       <Helmet>
         <title>Javi Portfolio - home</title>
       </Helmet>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contacts />
-      <Footer />
+      <div className="max-w-7xl mx-auto">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contacts />
+        <Footer />
+      </div>
     </>
   );
 };
