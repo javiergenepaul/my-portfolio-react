@@ -17,6 +17,11 @@ module.exports = {
         dark: "#151515",
         light: "#F7F7F8",
       },
+      
+    },
+    fontFamily: {
+      // chakra : ['Chakra Petch', 'sans-serif']
+      inter : ['Inter', 'sans-serif']
     },
     extend: {},
   },
