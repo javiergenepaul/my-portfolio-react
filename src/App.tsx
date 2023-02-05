@@ -1,10 +1,11 @@
 import { Home } from "./screens";
+import BackgroundParticles from "./components/particles/BackgroundParticles";
 
 function App() {
   return (
-    <div className="App">
-      {/* <h1 className="text-3xl font-bold underline">Hello world!</h1> */}
+    <div className="App min-h-screen bg-black text-white font-inter">
       <Home />
+      <BackgroundParticles/>
     </div>
   );
 }
