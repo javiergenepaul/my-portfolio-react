@@ -8,7 +8,7 @@ type Props = {};
 
 const BackgroundParticles = (props: Props) => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
+    // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
@@ -16,7 +16,7 @@ const BackgroundParticles = (props: Props) => {
   }, []);
 
   const particlesLoaded = useCallback(async (container: any) => {
-    await console.log(container);
+    // await console.log(container);
   }, []);
   return (
     <Particles
@@ -33,10 +33,10 @@ const BackgroundParticles = (props: Props) => {
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
+            // onClick: {
+            //   enable: true,
+            //   mode: "push",
+            // },
             onHover: {
               enable: true,
               mode: "connect",

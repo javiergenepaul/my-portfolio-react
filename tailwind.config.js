@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: 'class',
   theme: {
     colors: {
       primary: "#5047EB",
@@ -17,11 +17,10 @@ module.exports = {
         dark: "#151515",
         light: "#F7F7F8",
       },
-      
     },
     fontFamily: {
       // chakra : ['Chakra Petch', 'sans-serif']
-      inter : ['Inter', 'sans-serif']
+      inter: ["Inter", "sans-serif"],
     },
     extend: {},
   },
