@@ -1,9 +1,13 @@
 import { Home } from "./screens";
 import BackgroundParticles from "./components/particles/BackgroundParticles";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { JaviLogo } from "./assets";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(window.matchMedia("(prefers-color-scheme: dark)").matches);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
 
   useEffect(() => {
     window
@@ -21,6 +25,9 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Javi Portfolio</title>
+      </Helmet>
       <BackgroundParticles isDarkMode={isDarkMode} />
       <div className={`${isDarkMode && "dark"}`}>
         <div className="App min-h-screen dark:bg-black dark:text-white font-inter">
