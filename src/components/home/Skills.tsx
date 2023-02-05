@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { skills } from "../../constants/SkillsConstant";
+import { skills } from "../../constants/Constant";
 
 type Props = {};
 
