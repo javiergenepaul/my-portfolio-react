@@ -3,13 +3,16 @@ import BackgroundParticles from "./components/particles/BackgroundParticles";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>();
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   useEffect(() => {
-    setIsDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        setIsDarkMode(event.matches);
+      });
   }, []);
 
-  
   const toggleDarkMode = () => {
     setIsDarkMode((data) => {
       return !data;
@@ -18,7 +21,7 @@ function App() {
 
   return (
     <>
-      <BackgroundParticles />
+      <BackgroundParticles isDarkMode={isDarkMode} />
       <div className={`${isDarkMode && "dark"}`}>
         <div className="App min-h-screen dark:bg-black dark:text-white font-inter">
           <Home />

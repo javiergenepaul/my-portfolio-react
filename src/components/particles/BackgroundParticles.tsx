@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Engine } from "tsparticles-engine";
 
-type Props = {};
+type Props = {
+  isDarkMode: boolean;
+};
 
 const BackgroundParticles = (props: Props) => {
+  const darkParticle = "#F7F7F8";
+  const lightParticle = "#151515";
+  
   const particlesInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -18,6 +23,7 @@ const BackgroundParticles = (props: Props) => {
   const particlesLoaded = useCallback(async (container: any) => {
     // await console.log(container);
   }, []);
+
   return (
     <Particles
       id="tsparticles"
@@ -26,7 +32,7 @@ const BackgroundParticles = (props: Props) => {
       options={{
         background: {
           color: {
-            value: "#151515",
+            value: props.isDarkMode ? "#151515" : "#F7F7F8",
           },
           opacity: 0,
         },
@@ -55,10 +61,10 @@ const BackgroundParticles = (props: Props) => {
         },
         particles: {
           color: {
-            value: "#F7F7F8",
+            value: props.isDarkMode ? darkParticle : lightParticle,
           },
           links: {
-            color: "#F7F7F8",
+            value: props.isDarkMode ? darkParticle : lightParticle,
             distance: 150,
             enable: false,
             opacity: 0.2,
