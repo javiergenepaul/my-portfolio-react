@@ -67,8 +67,8 @@ const BackgroundParticles = (props: Props) => {
             value: props.isDarkMode ? darkParticle : lightParticle,
             distance: 150,
             enable: false,
-            opacity: 0.2,
-            width: 1,
+            opacity: 0.1,
+            width: 0.2,
           },
           collisions: {
             enable: true,
@@ -80,7 +80,7 @@ const BackgroundParticles = (props: Props) => {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 0.1,
             straight: false,
           },
           number: {

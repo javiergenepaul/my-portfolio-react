@@ -7,7 +7,7 @@ const Projects = (props: Props) => {
   return (
     <div className="w-full flex flex-col gap-4 min-h-screen">
       {projects.map((data) => (
-        <div className="w-full h-full bg-gray-01 flex flex-col p-6 rounded-lg cursor-pointer">
+        <div className="w-full h-full bg-gray-01 flex flex-col p-6 rounded-lg">
           <div className="flex gap-6">
             <div className="basis-1/5">
               <Icon
@@ -16,7 +16,7 @@ const Projects = (props: Props) => {
                 className="w-full h-full"
               />
             </div>
-            <div className="basis-4/5 flex flex-col gap-4">
+            <div className="basis-4/5 flex flex-col gap-4 w-full">
               <div className="">
                 <h3 className="font-bold">{data.title}</h3>
                 <small>{data.definition}</small>

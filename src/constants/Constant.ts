@@ -1,7 +1,9 @@
+
 const skills = [
   {
     id: 1,
     title: "React",
+    url: "https://reactjs.org/",
     definition: "Extact Code Snippets From Source Files",
     rating: 5,
     badges: [
@@ -211,4 +213,25 @@ const projects = [
   },
 ];
 
-export { skills, projects };
+const socialMedias = [
+  {
+    id: 1,
+    icon: "mdi:github",
+    title: "Github",
+    url: "https://github.com/javiergenepaul"
+  },
+  {
+    id: 2,
+    icon: "mdi:linkedin",
+    title: "LinkIn",
+    url: "https://www.linkedin.com/in/gene-paul-mar-javier-500b93245"
+  },
+  {
+    id: 3,
+    icon: "ic:baseline-facebook",
+    title: "Facebook",
+    url: "https://www.facebook.com/gennette29"
+  },
+];
+
+export { skills, projects,socialMedias };

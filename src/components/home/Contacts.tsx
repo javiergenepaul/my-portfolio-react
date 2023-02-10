@@ -55,8 +55,11 @@ const Contacts = (props: Props) => {
           >
             First name
           </label>
-          <input
-            type="text"
+          <textarea
+            id=""
+            // cols="30"
+            // rows="10"
+            placeholder="textfield"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
               focus:ring-blue-500 
               focus:border-blue-500 block w-full p-2.5 
@@ -66,8 +69,7 @@ const Contacts = (props: Props) => {
               dark:text-white 
               dark:focus:ring-blue-500 
               dark:focus:border-blue-500"
-            placeholder="Email"
-          />
+          ></textarea>
         </div>
       </div>
     </div>
