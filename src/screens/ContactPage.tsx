@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { FadeAnimation } from "../components";
 
-type Props = {}
+type Props = {};
 
 const ContactPage = (props: Props) => {
   return (
-    <div className='w-full bg-gray-1 p-6 rounded-lg'>Contact</div>
-  )
-}
+    <FadeAnimation>
+      <div className="">Contact</div>
+    </FadeAnimation>
+  );
+};
 
-export default ContactPage
+export default ContactPage;

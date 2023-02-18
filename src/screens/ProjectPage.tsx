@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { FadeAnimation } from "../components";
 
-type Props = {}
+type Props = {};
 
 const ProjectPage = (props: Props) => {
   return (
-    <div>Projects</div>
-  )
-}
+    <FadeAnimation>
+      <div>Projects</div>
+    </FadeAnimation>
+  );
+};
 
-export default ProjectPage
+export default ProjectPage;

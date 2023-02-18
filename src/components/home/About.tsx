@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 import { socialMedias } from "../../constants/Constant";
 import SocialButton from "../ui/SocialButton";
 
@@ -10,9 +11,9 @@ const About = (props: Props) => {
       <div className="flex flex-col gap-4">
         <h1 className="text-7xl font-bold select-none">
           Hello, I'm <br />{" "}
-          <span className="hover:text-primary transition duration-150 cursor-pointer">
+          <Link to="about" className="hover:text-primary transition duration-150 cursor-pointer">
             Paul Javier
-          </span>
+          </Link>
         </h1>
         <p>
           Do exercitation qui labore enim. Occaecat consectetur mollit minim non
@@ -24,21 +25,21 @@ const About = (props: Props) => {
       </div>
       <div className="flex flex-col gap-10 select-none">
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2">
+          <Link to="/skills" className="flex items-center gap-2">
             <span>01</span>
             <div className="border w-[30px]"></div>
             <span>Skills</span>
-          </div>
-          <div className="flex items-center gap-2">
+          </Link>
+          <Link to="/projects" className="flex items-center gap-2">
             <span>02</span>
             <div className="border w-[30px]"></div>
             <span>Projects</span>
-          </div>
-          <div className="flex items-center gap-2">
+          </Link>
+          <Link to="/contact" className="flex items-center gap-2">
             <span>03</span>
             <div className="border w-[30px]"></div>
-            <span>Contacts</span>
-          </div>
+            <span>Contact</span>
+          </Link>
         </div>
         <div className="flex flex-row gap-10">
           {socialMedias.map((data) => (

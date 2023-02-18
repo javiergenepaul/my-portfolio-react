@@ -3,12 +3,12 @@ import { FadeAnimation } from "../components";
 
 type Props = {};
 
-const AboutPage = (props: Props) => {
+const SkillsPage = (props: Props) => {
   return (
     <FadeAnimation>
-      <div>About</div>
+      <div>SkillsPage</div>
     </FadeAnimation>
   );
 };
 
-export default AboutPage;
+export default SkillsPage;

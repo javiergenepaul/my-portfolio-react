@@ -1,8 +1,16 @@
-import { ContactPage, HomePage, AboutPage, ProjectPage } from "./screens";
+import {
+  ContactPage,
+  HomePage,
+  AboutPage,
+  ProjectPage,
+  SplashScreen,
+  SkillsPage,
+} from "./screens";
 import BackgroundParticles from "./components/particles/BackgroundParticles";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
@@ -23,6 +31,7 @@ function App() {
     });
   };
 
+  const location = useLocation();
   return (
     <>
       <Helmet>
@@ -31,12 +40,16 @@ function App() {
       <BackgroundParticles isDarkMode={isDarkMode} />
       <div className={`${isDarkMode && "dark"}`}>
         <div className="App min-h-screen dark:bg-black dark:text-white font-inter">
-            <Routes>
-              <Route path="/" element={ <HomePage />} />
-              <Route path="contact" element={ <ContactPage />} />
-              <Route path="about" element={ <AboutPage />} />
-              <Route path="project" element={ <ProjectPage/> } />
+          <AnimatePresence exitBeforeEnter>
+            <Routes key={location.pathname} location={location}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="skills" element={<SkillsPage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="projects" element={<ProjectPage />} />
+              <Route path="splash" element={<SplashScreen />} />
             </Routes>
+          </AnimatePresence>
         </div>
       </div>
     </>
