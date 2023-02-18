@@ -9,5 +9,6 @@ import Skills from "./home/Skills";
 import Nav from "./ui/Nav";
 import Footer from "./ui/Footer";
 import SocialButton from "./ui/SocialButton";
+import Card from "./ui/Card";
 
-export { About, Contacts, Projects, Skills, Footer, Nav, SocialButton };
+export { About, Contacts, Projects, Skills, Footer, Nav, SocialButton, Card };

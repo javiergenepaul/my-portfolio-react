@@ -7,7 +7,6 @@ module.exports = {
       primary: "#5047EB",
       white: "#FFFFFF",
       black: "#121212",
-      black: "#121212",
       gray: {
         "01": "#202022",
         "02": "#A1A1A1",

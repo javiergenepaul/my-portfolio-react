@@ -1,10 +1,8 @@
-import { Contact, Home } from "./screens";
+import { ContactPage, HomePage, AboutPage, ProjectPage } from "./screens";
 import BackgroundParticles from "./components/particles/BackgroundParticles";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { JaviLogo } from "./assets";
 import { Route, Routes } from "react-router-dom";
-import { About, Projects } from "./components";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(
@@ -34,10 +32,10 @@ function App() {
       <div className={`${isDarkMode && "dark"}`}>
         <div className="App min-h-screen dark:bg-black dark:text-white font-inter">
             <Routes>
-              <Route path="/" element={ <Home />} />
-              <Route path="contact" element={ <Contact />} />
-              <Route path="about" element={ <About />} />
-              <Route path="project" element={ <Projects />} />
+              <Route path="/" element={ <HomePage />} />
+              <Route path="contact" element={ <ContactPage />} />
+              <Route path="about" element={ <AboutPage />} />
+              <Route path="project" element={ <ProjectPage/> } />
             </Routes>
         </div>
       </div>

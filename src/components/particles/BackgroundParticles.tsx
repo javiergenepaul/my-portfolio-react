@@ -43,10 +43,10 @@ const BackgroundParticles = (props: Props) => {
             //   enable: true,
             //   mode: "push",
             // },
-            onHover: {
-              enable: true,
-              mode: "connect",
-            },
+            // onHover: {
+            //   enable: true,
+            //   mode: "connect",
+            // },
             resize: true,
           },
           modes: {
@@ -68,7 +68,7 @@ const BackgroundParticles = (props: Props) => {
             distance: 150,
             enable: false,
             opacity: 0.1,
-            width: 0.2,
+            width: 1,
           },
           collisions: {
             enable: true,

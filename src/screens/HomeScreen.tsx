@@ -1,11 +1,18 @@
 import { Icon } from "@iconify/react";
+import { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { About, Contacts, Footer, Projects, Skills } from "../components";
 import { skills } from "../constants/Constant";
 
 type Props = {};
 
-const Home = (props: Props) => {
+const HomePage = (props: Props) => {
+  const skills = useRef<any>(null);
+
+  useEffect(() => {
+    console.log(skills.current.offsetBot);
+  }, [skills]);
+
   return (
     <>
       <Helmet>
@@ -17,9 +24,15 @@ const Home = (props: Props) => {
             <About />
           </div>
           <div className="basis-3/5 w-full h-full flex flex-col gap-4">
-            <Skills />
-            <Projects />
+            <Skills ref={skills} name="sample" />
             <Contacts />
+            {/* <Projects /> */}
+            <button
+              onClick={() => {
+                window.scrollTo(0, skills.current.offsetTop);
+              }}
+            >
+            </button>
           </div>
         </div>
       </div>
@@ -27,4 +40,4 @@ const Home = (props: Props) => {
   );
 };
 
-export default Home;
+export default HomePage;

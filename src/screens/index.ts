@@ -1,6 +1,6 @@
-import Home from "./Home";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import HomePage from "./HomeScreen";
+import AboutPage from "./AboutPage";
+import ProjectPage from "./ProjectPage";
+import ContactPage from "./ContactPage";
 
-export { Home, About, Contact, Projects };
+export { HomePage, AboutPage, ContactPage, ProjectPage };
