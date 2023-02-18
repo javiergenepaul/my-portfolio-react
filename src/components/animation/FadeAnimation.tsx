@@ -1,11 +1,11 @@
 import { motion, Variants } from "framer-motion";
 import React, { ReactNode } from "react";
 
-type Props = {
+type FadeAnimationProps = {
   children: ReactNode;
 };
 
-const FadeAnimation = (props: Props) => {
+const FadeAnimation = (props: FadeAnimationProps) => {
   const { children } = props;
 
   const fadeVariants: Variants = {
@@ -29,7 +29,12 @@ const FadeAnimation = (props: Props) => {
   };
 
   return (
-    <motion.div variants={fadeVariants} initial="initial" animate="animate" exit="exit">
+    <motion.div
+      variants={fadeVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       {children}
     </motion.div>
   );

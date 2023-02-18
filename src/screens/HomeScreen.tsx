@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
+import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   About,
   Contacts,
   FadeAnimation,
-  Footer,
-  Projects,
+  Header,
+  ScreenContainer,
   Skills,
 } from "../components";
 
@@ -14,24 +14,33 @@ type Props = {};
 
 const HomePage = (props: Props) => {
   const skills = useRef<any>(null);
+  const notify = () =>
+    toast.success("🦄 Wow so easy!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   return (
     <>
-      <Helmet>
-        <title>Javi Portfolio - home</title>
-      </Helmet>
-      <FadeAnimation> 
-        <div className="max-w-7xl mx-auto">
-          <div className="flex gap-32 h-full px-4 py-16">
-            <div className="sticky top-20 h-[550px] basis-2/5">
-              <About />
-            </div>
-            <div className="basis-3/5 w-full h-full flex flex-col gap-4">
-              <Skills ref={skills} name="sample" />
-              <Contacts />
-            </div>
+      <Header title="Home" />
+      <FadeAnimation>
+        <ScreenContainer>
+          <div className="sticky top-20 h-[550px] basis-2/5">
+            <About />
           </div>
-        </div>
+          <div className="basis-3/5 w-full h-full flex flex-col gap-4">
+            <Skills ref={skills} name="sample" />
+            <Contacts onSubmit={notify} />
+          </div>
+          <ToastContainer />
+          {/* Same as */}
+        </ScreenContainer>
       </FadeAnimation>
     </>
   );

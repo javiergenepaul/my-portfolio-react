@@ -1,13 +1,18 @@
 import React from "react";
-import { FadeAnimation } from "../components";
+import { FadeAnimation, Header, ScreenContainer } from "../components";
 
 type Props = {};
 
 const SkillsPage = (props: Props) => {
   return (
-    <FadeAnimation>
-      <div>SkillsPage</div>
-    </FadeAnimation>
+    <>
+      <Header title="Skills" />
+      <FadeAnimation>
+        <ScreenContainer>
+          <div>SkillsPage</div>
+        </ScreenContainer>
+      </FadeAnimation>
+    </>
   );
 };
 

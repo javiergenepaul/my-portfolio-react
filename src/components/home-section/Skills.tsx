@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
 import { forwardRef } from "react";
 import { skills } from "../../constants/Constant";
-import Badge from "../ui/Badge";
-import Card from "../ui/Card";
+import Badge from "../common/Badge";
+import Card from "../common/Card";
 
 type Props = {
   name: string;

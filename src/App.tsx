@@ -39,8 +39,8 @@ function App() {
       </Helmet>
       <BackgroundParticles isDarkMode={isDarkMode} />
       <div className={`${isDarkMode && "dark"}`}>
-        <div className="App min-h-screen dark:bg-black dark:text-white font-inter">
-          <AnimatePresence exitBeforeEnter>
+        <div className="App min-h-screen dark:bg-black dark:text-white font-inter select-none">
+          <AnimatePresence mode="wait">
             <Routes key={location.pathname} location={location}>
               <Route path="/" element={<HomePage />} />
               <Route path="contact" element={<ContactPage />} />

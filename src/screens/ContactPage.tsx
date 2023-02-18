@@ -1,13 +1,18 @@
 import React from "react";
-import { FadeAnimation } from "../components";
+import { FadeAnimation, Header, ScreenContainer } from "../components";
 
 type Props = {};
 
 const ContactPage = (props: Props) => {
   return (
-    <FadeAnimation>
-      <div className="">Contact</div>
-    </FadeAnimation>
+    <>
+      <Header title="Contacts" />
+      <FadeAnimation>
+        <ScreenContainer>
+          <div className="">Contact</div>
+        </ScreenContainer>
+      </FadeAnimation>
+    </>
   );
 };
 
