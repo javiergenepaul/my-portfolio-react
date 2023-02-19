@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { forwardRef } from "react";
 import { skills } from "../../constants/Constant";
+import { BounceText } from "../animation";
 import Badge from "../common/Badge";
 import Card from "../common/Card";
 

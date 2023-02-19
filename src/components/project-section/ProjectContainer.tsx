@@ -1,4 +1,5 @@
 import React from "react";
+import { BounceText } from "../animation";
 import Card from "../common/Card";
 
 type Props = {
@@ -19,7 +20,9 @@ const ProjectContainer = (props: Props) => {
           <div className="basis-1/2">
             <div className="flex flex-col h-full">
               {isPrimary && (
-                <h3 className="text-primary font-bold">PROJECTS</h3>
+                <h3 className="text-primary font-bold">
+                  <BounceText path="/" text="PROJECTS" />
+                </h3>
               )}
               <div className="flex-1">
                 <div className="flex flex-col gap-4 h-full justify-center">

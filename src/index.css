@@ -37,3 +37,11 @@
     @apply text-[16px] text-black dark:text-white;
   }
 }
+
+
+* {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 type HeaderProps = {
   title: string;
@@ -7,9 +8,13 @@ type HeaderProps = {
 
 const Header = (props: HeaderProps) => {
   const { title } = props;
+  const { t } = useTranslation();
+
   return (
     <Helmet>
-      <title>Javi Portfolio - {title}</title>
+      <title>
+        {t("header")} - {title}
+      </title>
     </Helmet>
   );
 };

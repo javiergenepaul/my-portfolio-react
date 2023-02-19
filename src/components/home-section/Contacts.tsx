@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Button, Card, ContactLogo, Input, TextArea } from "..";
 import emailjs from "emailjs-com";
+import { useTranslation } from "react-i18next";
 
 type ContactsProps = {
   onSubmit: () => void;
@@ -10,6 +11,7 @@ const Contacts = (props: ContactsProps) => {
   const { onSubmit } = props;
   const form = useRef<any>();
   const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation();
 
   const onSubmitHandler = (event: any) => {
     event?.preventDefault();
@@ -21,25 +23,25 @@ const Contacts = (props: ContactsProps) => {
     }, 2000);
   };
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE ?? "",
-        process.env.REACT_APP_TEMPLATE_ID ?? "",
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result: any) => {
-          console.log(result.text);
-        },
-        (error: any) => {
-          console.log(error.text);
-        }
-      );
-  };
-
+  // const sendEmail = (e: any) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       process.env.REACT_APP_SERVICE ?? "",
+  //       process.env.REACT_APP_TEMPLATE_ID ?? "",
+  //       form.current,
+  //       process.env.REACT_APP_PUBLIC_KEY
+  //     )
+  //     .then(
+  //       (result: any) => {
+  //         console.log(result.text);
+  //       },
+  //       (error: any) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
+  const number_of_days = 0;
   return (
     <div className="w-full min-h-[500p]">
       <Card style="py-24 px-16 flex flex-col gap-10">

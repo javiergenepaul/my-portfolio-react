@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {
@@ -17,6 +18,8 @@ type Props = {
 const HomePage = (props: Props) => {
   const { theme } = props;
   const skills = useRef<any>(null);
+  const { t } = useTranslation();
+
   const notify = () =>
     toast.success("Your email has been sent.", {
       position: "top-right",
@@ -28,9 +31,10 @@ const HomePage = (props: Props) => {
       progress: undefined,
       theme: theme,
     });
+
   return (
     <>
-      <Header title="Home" />
+      <Header title={t("home")} />
       <FadeAnimation>
         <ScreenContainer>
           <div className="sticky top-20 h-[550px] basis-1/2">
