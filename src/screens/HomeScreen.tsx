@@ -10,12 +10,15 @@ import {
   Skills,
 } from "../components";
 
-type Props = {};
+type Props = {
+  theme: "dark" | "light";
+};
 
 const HomePage = (props: Props) => {
+  const { theme } = props;
   const skills = useRef<any>(null);
   const notify = () =>
-    toast.success("🦄 Wow so easy!", {
+    toast.success("Your email has been sent.", {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -23,9 +26,8 @@ const HomePage = (props: Props) => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: "light",
+      theme: theme,
     });
-
   return (
     <>
       <Header title="Home" />
@@ -39,7 +41,6 @@ const HomePage = (props: Props) => {
             <Contacts onSubmit={notify} />
           </div>
           <ToastContainer />
-          {/* Same as */}
         </ScreenContainer>
       </FadeAnimation>
     </>

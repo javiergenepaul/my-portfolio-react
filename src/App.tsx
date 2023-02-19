@@ -42,7 +42,10 @@ function App() {
         <div className="App min-h-screen dark:bg-black dark:text-white font-inter select-none">
           <AnimatePresence mode="wait">
             <Routes key={location.pathname} location={location}>
-              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/"
+                element={<HomePage theme={isDarkMode ? "dark" : "light"} />}
+              />
               <Route path="contact" element={<ContactPage />} />
               <Route path="skills" element={<SkillsPage />} />
               <Route path="about" element={<AboutPage />} />
