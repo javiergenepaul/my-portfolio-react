@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { JaviContactLogo } from "../../assets";
-import { Button, Card, Input, TextArea } from "..";
+import { Button, Card, ContactLogo, Input, TextArea } from "..";
 import emailjs from "emailjs-com";
 
 type ContactsProps = {
@@ -44,11 +43,7 @@ const Contacts = (props: ContactsProps) => {
   return (
     <div className="w-full min-h-[500p]">
       <Card style="py-24 px-16 flex flex-col gap-10">
-        <img
-          src={JaviContactLogo}
-          className="w-[74px] h-[74px]"
-          alt={"javi-logo.svg"}
-        />
+        <ContactLogo />
         <h3 className="font-medium">Let's Keep in touch</h3>
         <form
           id={"contact-me"}

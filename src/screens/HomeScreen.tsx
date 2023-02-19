@@ -33,14 +33,16 @@ const HomePage = (props: Props) => {
       <Header title="Home" />
       <FadeAnimation>
         <ScreenContainer>
-          <div className="sticky top-20 h-[550px] basis-2/5">
+          <div className="sticky top-20 h-[550px] basis-1/2">
             <About />
           </div>
-          <div className="basis-3/5 w-full h-full flex flex-col gap-4">
+          <div className="basis-1/2 w-full h-full flex flex-col gap-4">
             <Skills ref={skills} name="sample" />
             <Contacts onSubmit={notify} />
           </div>
-          <ToastContainer />
+          <div className="fixed">
+            <ToastContainer />
+          </div>
         </ScreenContainer>
       </FadeAnimation>
     </>
